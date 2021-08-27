@@ -35,9 +35,9 @@
                 <x-label for="role_id" :value="__('Content')" />
                 <select name="role_id" id="pet-select" :value="old('role_id')">
                     <option value="">--Please choose an option--</option>
-                    <option value="3">Author</option>
-                    <option value="2">Moderator</option>
-                    <option value="1">Admin</option>
+                    <option value="{{ App\Models\Role::where('name', 'Author')->first()->id }}">Author</option>
+                    <option value="{{ App\Models\Role::where('name', 'Moderator')->first()->id }}">Moderator</option>
+                    <option value="{{ App\Models\Role::where('name', 'Admin')->first()->id }}">Admin</option>
                 </select>
                
             </div>
