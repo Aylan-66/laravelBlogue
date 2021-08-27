@@ -21,21 +21,21 @@ Il y a trois utilisateurs qui ont les trois rôles.
         "name":"testAdmin",
         "email":"admin@test.com",
         "password":"testtest",
-        "role_id":"1"
+        "role":"Admin"
     },
     {
         "id":"2",
         "name":"testModo",
         "email":"moderator@test.com",
         "password":"testtest",
-        "role_id":"2"
+        "role_id":"Moderator"
     },
     {
         "id":"3",
         "name":"testAuthor",
         "email":"author@test.com",
         "password":"testtest",
-        "role_id":"3"
+        "role_id":"Author"
     }
 ]
 ```
