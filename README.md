@@ -1,19 +1,43 @@
 # Test Laravel blogue
 
-## Créations des rôles
+## Rôles
 
-Pour les rôles, j'ai décidé de faire une commande qui prend en argument le name du rôle créer.
+Trois rôles sont créés durant la migration.
 
-```bash
-php artisan createrole {name}
+“Admin, Moderator, Author”.
+
+
+## Users:
+
+Lors de la création, d’un user,il prend par défaut le rôle Author, seul un admin peut modifier son rôle.
+
+Il y a trois utilisateurs qui ont les trois rôles.
+
+```json
+
+[
+    {
+        "id":"1",
+        "name":"testAdmin",
+        "email":"admin@test.com",
+        "password":"testtest",
+        "role_id":"1"
+    },
+    {
+        "id":"2",
+        "name":"testModo",
+        "email":"moderator@test.com",
+        "password":"testtest",
+        "role_id":"2"
+    },
+    {
+        "id":"3",
+        "name":"testAuthor",
+        "email":"author@test.com",
+        "password":"testtest",
+        "role_id":"3"
+    }
+]
 ```
 
-## Le projet est conçu pour ces trois rôles bien précis:
 
-"Admin, Moderator, Author"
-
-Lors de la création d'un user, il est par défault "Author".
-
-Il faut donc passer par la db pour mettre un user en admin. Celui-ci pourras ensuite manager les rôles des utilisateurs via l'application directement.
-
-Après ces étapes, le projet est prêt!
